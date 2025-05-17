@@ -10,26 +10,15 @@ variable "environment" {
   default     = "prod"
 }
 
-variable "account-id" {
-  description = "AWS AccountId"
-  type        = string
-  default     = "696818665598"
-}
-
 variable "repository_name" {
   description = "ECR Repository Name"
   type        = string
-  default     = "FIAP-prod"
-}
-
-variable "image_name" {
-  description = "Docker image name"
-  type        = string
+  default     = "fiap-prod"
 }
 
 variable "projectName" {
   type    = string
-  default = "EKS-FIAP-prod"
+  default = "eks-fiap-prod"
 }
 
 variable "accessConfig" {
@@ -62,8 +51,3 @@ variable "policyArn" {
   default = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
 }
 
-variable "cluster_name" {
-  description = "Nome do cluster EKS"
-  type        = string
-  default     = "fiap-prod"
-}
