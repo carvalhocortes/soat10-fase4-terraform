@@ -18,7 +18,7 @@ variable "repository_name" {
 
 variable "projectName" {
   type    = string
-  default = "eks-fiap-prod"
+  default = "eks-fiap-soat10-prod"
 }
 
 variable "accessConfig" {
