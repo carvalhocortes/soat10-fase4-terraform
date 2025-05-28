@@ -3,7 +3,7 @@ terraform {
     bucket = "postech-soat10-bucket"
     key    = "github-actions-fiap/kubernets/terraform.tfstate"
 
-    region  = "us-east-1"
+    region  = "us-west-2"
     encrypt = true
   }
 
