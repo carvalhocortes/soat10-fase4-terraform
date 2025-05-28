@@ -33,7 +33,7 @@ variable "nodeGroup" {
 
 variable "instanceType" {
   type    = string
-  default = "t2.micro"
+  default = "t3.medium"
 }
 
 variable "labRole" {
