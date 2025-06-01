@@ -21,27 +21,9 @@ resource "aws_eks_cluster" "eks-cluster" {
   role_arn = var.labRole
 
   vpc_config {
-    subnet_ids         = [for subnet in data.aws_subnet.subnet : subnet.id if subnet.availability_zone != "${var.aws_region}e"]
-    security_group_ids = [aws_security_group.sg.id]
-  }
-
-  access_config {
-    authentication_mode = var.accessConfig
-  }
-}
-
-resource "aws_eks_access_entry" "eks-access-entry" {
-  cluster_name  = aws_eks_cluster.eks-cluster.name
-  principal_arn = var.principalArn
-  type          = "STANDARD"
-}
-
-resource "aws_eks_access_policy_association" "eks-access-policy" {
-  cluster_name  = aws_eks_cluster.eks-cluster.name
-  policy_arn    = var.policyArn
-  principal_arn = var.principalArn
-
-  access_scope {
-    type = "cluster"
+    subnet_ids              = [for subnet in data.aws_subnet.subnet : subnet.id if subnet.availability_zone != "${var.aws_region}e"]
+    security_group_ids      = [aws_security_group.sg.id]
+    endpoint_public_access  = true
+    endpoint_private_access = false
   }
 }
