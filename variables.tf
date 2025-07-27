@@ -10,10 +10,10 @@ variable "environment" {
   default     = "prod"
 }
 
-variable "repository_name" {
-  description = "ECR Repository Name"
-  type        = string
-  default     = "fiap-prod"
+variable "repository_names" {
+  description = "ECR Repository Names"
+  type        = list(string)
+  default     = ["fiap-payments-prod", "fiap-production-prod", "fiap-orders-prod"]
 }
 
 variable "projectName" {
