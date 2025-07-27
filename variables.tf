@@ -36,14 +36,9 @@ variable "instanceType" {
   default = "t3.medium"
 }
 
-variable "labRole" {
+variable "aws_account_id" {
   type    = string
-  default = "arn:aws:iam::548226336065:role/LabRole"
-}
-
-variable "principalArn" {
-  type    = string
-  default = "arn:aws:iam::548226336065:role/voclabs"
+  default = "548226336065"
 }
 
 variable "policyArn" {
