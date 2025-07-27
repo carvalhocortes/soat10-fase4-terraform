@@ -38,12 +38,12 @@ variable "instanceType" {
 
 variable "labRole" {
   type    = string
-  default = "arn:aws:iam::578625597971:role/LabRole"
+  default = "arn:aws:iam::548226336065:role/LabRole"
 }
 
 variable "principalArn" {
   type    = string
-  default = "arn:aws:iam::578625597971:role/voclabs"
+  default = "arn:aws:iam::548226336065:role/voclabs"
 }
 
 variable "policyArn" {
