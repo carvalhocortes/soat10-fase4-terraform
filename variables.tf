@@ -10,10 +10,10 @@ variable "environment" {
   default     = "prod"
 }
 
-variable "repository_name" {
-  description = "ECR Repository Name"
-  type        = string
-  default     = "fiap-prod"
+variable "repository_names" {
+  description = "ECR Repository Names"
+  type        = list(string)
+  default     = ["fiap-payments-prod", "fiap-production-prod", "fiap-orders-prod"]
 }
 
 variable "projectName" {
@@ -36,14 +36,9 @@ variable "instanceType" {
   default = "t3.medium"
 }
 
-variable "labRole" {
+variable "aws_account_id" {
   type    = string
-  default = "arn:aws:iam::578625597971:role/LabRole"
-}
-
-variable "principalArn" {
-  type    = string
-  default = "arn:aws:iam::578625597971:role/voclabs"
+  default = "548226336065"
 }
 
 variable "policyArn" {
